@@ -30,7 +30,6 @@ all: fs test2
 # Remember to set the CPLUS_INCLUDE_PATH, LIBRARY_PATH, and LD_LIBRARY_PATH
 # environment variables to include your Boost installation directory.
 fs: ${FS_OBJS} ${LIBFSSERVER}
-	./autotag.sh push ${FS_SOURCES}
 	${CC} -o $@ $^ -l${BOOST_THREAD} -lboost_system -pthread -ldl
     
 # Compile a client program
